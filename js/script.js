@@ -17,6 +17,17 @@ words.forEach(word => {
     word.addEventListener('dragend', e => {
         word.classList.remove('dragging');
     });
+
+    // Soporte táctil
+    word.addEventListener('touchstart', function(e) {
+        draggedWord = word;
+        word.classList.add('dragging');
+        e.target.touchDragging = true;
+    }, {passive: true});
+    word.addEventListener('touchend', function(e) {
+        word.classList.remove('dragging');
+        e.target.touchDragging = false;
+    }, {passive: true});
 });
 
 
@@ -38,6 +49,27 @@ dropzones.forEach(zone => {
             draggedWord.remove();
         }
     });
+
+    // Soporte táctil
+    zone.addEventListener('touchmove', function(e) {
+        if (draggedWord && draggedWord.touchDragging) {
+            e.preventDefault();
+        }
+    }, {passive: false});
+    zone.addEventListener('touchend', function(e) {
+        if (draggedWord && draggedWord.touchDragging) {
+            zone.textContent = draggedWord.textContent;
+            if (draggedWord.textContent === zone.dataset.answer) {
+                zone.classList.add('correct');
+                zone.classList.remove('incorrect');
+            } else {
+                zone.classList.add('incorrect');
+                zone.classList.remove('correct');
+            }
+            draggedWord.remove();
+            draggedWord.touchDragging = false;
+        }
+    }, {passive: false});
 });
 
 var fails1 = localStorage.getItem("fails1");
