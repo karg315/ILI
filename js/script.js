@@ -138,7 +138,7 @@ try {
 document
     .getElementById("checkchar1")
     .addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que se envíe el formulario
+        event.preventDefault();
         var char1 = document.getElementById("char1").value;
         if (char1.trim() !== "") {
             let char = char1.split("");
@@ -162,19 +162,25 @@ document
                     localStorage.setItem("fails1", fails1);
                     if (fails1 === 1) {
                         imgHangman1.src = "./images/hangman1.jpg";
+                        $("#WrongModal3").modal("show");
                     } else if (fails1 === 2) {
                         imgHangman1.src = "./images/hangman2.jpg";
+                        $("#WrongModal4").modal("show");
                     } else if (fails1 === 3) {
                         imgHangman1.src = "./images/hangman3.jpg";
+                        $("#WrongModal6").modal("show");
                     } else if (fails1 === 4) {
                         imgHangman1.src = "./images/hangman4.jpg";
                         document.getElementById("hint1").innerHTML = "Hint: Work together";
+                        $("#WrongModal7").modal("show");
                     } else if (fails1 === 5) {
                         imgHangman1.src = "./images/hangman5.jpg";
                         document.getElementById("hint1").innerHTML = "Hint: Work together";
+                        $("#WrongModal8").modal("show");
                     } else if (fails1 === 6) {
                         imgHangman1.src = "./images/hangman6.jpg";
                         document.getElementById("hint1").innerHTML = "Hint: Work together";
+                        $("#WrongModal9").modal("show");
                     } else if (fails1 >= 7) {
                         imgHangman1.src = "./images/hangman7.jpg";
                         $("#WrongModal5").modal("show");
@@ -183,7 +189,6 @@ document
                     }
                     document.getElementById("txtFails1").innerHTML = "Fails: " + fails1;
                 }
-
                 if (
                     currentWord1.includes("t") &&
                     currentWord1.includes("e") &&
@@ -204,7 +209,7 @@ document
 document
     .getElementById("checkchar2")
     .addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que se envíe el formulario
+        event.preventDefault();
         var char2 = document.getElementById("char2").value;
         if (char2.trim() !== "") {
             let char = char2.split("");
@@ -240,19 +245,25 @@ document
                     localStorage.setItem("fails2", fails2);
                     if (fails2 === 1) {
                         imgHangman2.src = "./images/hangman1.jpg";
+                        $("#WrongModal3").modal("show");
                     } else if (fails2 === 2) {
                         imgHangman2.src = "./images/hangman2.jpg";
+                        $("#WrongModal4").modal("show");
                     } else if (fails2 === 3) {
                         imgHangman2.src = "./images/hangman3.jpg";
+                        $("#WrongModal6").modal("show");
                     } else if (fails2 === 4) {
                         imgHangman2.src = "./images/hangman4.jpg";
                         document.getElementById("hint2").innerHTML = "Hint: Group work (Plural)";
+                        $("#WrongModal7").modal("show");
                     } else if (fails2 === 5) {
                         imgHangman2.src = "./images/hangman5.jpg";
                         document.getElementById("hint2").innerHTML = "Hint: Group work (Plural)";
+                        $("#WrongModal8").modal("show");
                     } else if (fails2 === 6) {
                         imgHangman2.src = "./images/hangman6.jpg";
                         document.getElementById("hint2").innerHTML = "Hint: Group work (Plural)";
+                        $("#WrongModal9").modal("show");
                     } else if (fails2 >= 7) {
                         imgHangman2.src = "./images/hangman7.jpg";
                         $("#WrongModal5").modal("show");
@@ -286,7 +297,7 @@ document
 document
     .getElementById("checkchar3")
     .addEventListener("submit", function (event) {
-        event.preventDefault(); // Evita que se envíe el formulario
+        event.preventDefault();
         var char3 = document.getElementById("char3").value;
         if (char3.trim() !== "") {
             let char = char3.split("");
@@ -317,19 +328,25 @@ document
                     localStorage.setItem("fails3", fails3);
                     if (fails3 === 1) {
                         imgHangman3.src = "./images/hangman1.jpg";
+                        $("#WrongModal3").modal("show");
                     } else if (fails3 === 2) {
                         imgHangman3.src = "./images/hangman2.jpg";
+                        $("#WrongModal4").modal("show");
                     } else if (fails3 === 3) {
                         imgHangman3.src = "./images/hangman3.jpg";
+                        $("#WrongModal6").modal("show");
                     } else if (fails3 === 4) {
                         imgHangman3.src = "./images/hangman4.jpg";
                         document.getElementById("hint3").innerHTML = "Hint: Work session";
+                        $("#WrongModal7").modal("show");
                     } else if (fails3 === 5) {
                         imgHangman3.src = "./images/hangman5.jpg";
                         document.getElementById("hint3").innerHTML = "Hint: Work session";
+                        $("#WrongModal8").modal("show");
                     } else if (fails3 === 6) {
                         imgHangman3.src = "./images/hangman6.jpg";
                         document.getElementById("hint3").innerHTML = "Hint: Work session";
+                        $("#WrongModal9").modal("show");
                     } else if (fails3 >= 7) {
                         imgHangman3.src = "./images/hangman7.jpg";
                         $("#WrongModal5").modal("show");
