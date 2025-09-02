@@ -44,6 +44,7 @@ section {
 
 .modal-content {
     width: 400px;
+    max-width: 95vw;
 }
 
 h2 {
@@ -184,6 +185,13 @@ footer {
     max-width: 400px;
 }
 
+.hangman-container img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
 #last {
     margin-bottom: 25px;
 }
@@ -254,7 +262,6 @@ h3 {
 #btnCheckOrder {
     margin-left: 10px;
 }
-
 
 .container #words {
 display: grid;
@@ -336,5 +343,16 @@ border-bottom: 2px solid #ef4444;
   .words {
     gap: 6px;
     padding: 0 4px;
+  }
+  .hangman-container img {
+    max-width: 100vw;
+    width: 100%;
+    height: auto;
+  }
+  .modal-content {
+    width: 95vw;
+    max-width: 95vw;
+    min-width: 0;
+    margin: 0 auto;
   }
 }

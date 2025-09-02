@@ -142,15 +142,16 @@ if (fails3 === null) {
         imgHangman3.src = "./images/hangman3.jpg";
     } else if (fails3 == 4) {
         imgHangman3.src = "./images/hangman4.jpg";
+        document.getElementById("hint3").innerHTML = "Hint: Work session";
     } else if (fails3 == 5) {
         imgHangman3.src = "./images/hangman5.jpg";
-        document.getElementById("hint3").innerHTML = "Hint: Tires";
+        document.getElementById("hint3").innerHTML = "Hint: Work session";
     } else if (fails3 == 6) {
         imgHangman3.src = "./images/hangman6.jpg";
-        document.getElementById("hint3").innerHTML = "Hint: Tires";
+        document.getElementById("hint3").innerHTML = "Hint: Work session";
     } else if (fails3 == 7) {
         imgHangman3.src = "./images/hangman7.jpg";
-        document.getElementById("hint3").innerHTML = "Hint: Tires";
+        document.getElementById("hint3").innerHTML = "Hint: Work session";
         document.getElementById("btnCheckChar3").classList.add("disabled");
     }
 }
